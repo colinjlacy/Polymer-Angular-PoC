@@ -6,6 +6,7 @@
 	<link rel="import" href="assets/lib/polymer.html">
 	<link rel="import" href="weather/components/city-input.html">
 	<link rel="import" href="weather/components/state-input.html">
+	<link rel="import" href="weather/components/properties.html">
 </head>
 <body ng-controller="weatherCtrl">
 
@@ -33,11 +34,27 @@
 		<div class="col-sm-6">
 			<div class="panel panel-card">
 				<div class="panel-body">
-					<h1>{{weather.city}} <small>| {{weather.state}}</small></h1>
+					<div class="row">
+						<div class="col-sm-9">
+							<h1>{{city}} <small>| {{state}}</small></h1>
+						</div>
+						<div class="col-sm-3">
+							<image src="{{weather.image}}"></image>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6"></div>
+		<div class="col-sm-6">
+			<object-properties data="{{stats}}"></object-properties>
+			<div class="panel panel-card">
+				<div class="panel-body">
+						<a class="btn btn-primary" href="{{weather.forcastUrl}}">Forecast</a>
+						<a class="btn btn-primary" href="{{weather.historyUrl}}">History</a>
+						<button class="btn btn-warning pull-right" ng-click="reset()">Reset</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div><!-- /.container -->

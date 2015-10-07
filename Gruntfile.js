@@ -19,20 +19,20 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			styles: {
-				files: ['./assets/less/*.less'], // which files to watch
+				files: ['assets/less/*.less'], // which files to watch
 				tasks: ['less'],
 				options: {
 					livereload: true
 				}
 			},
 			js: {
-				files: ['./app/**/*.js'],
+				files: ['app/**/*.js'],
 				options: {
 					livereload: true
 				}
 			},
 			html: {
-				files: ['./**/*.html'],
+				files: ['**/*.html'],
 				options: {
 					livereload: true
 				}

@@ -13,18 +13,18 @@ angular.module('weather')
 				$scope.state + '/' + $scope.city.replace(' ', '_') + '.json')
 				.then(function(res) {
 					$scope.weather = {
-						stats: {
-							temp: res.data.current_observation.temperature_string,
-							feelslike: res.data.current_observation.feelslike_string,
-							humidity: res.data.current_observation.relative_humidity,
-							wind: res.data.current_observation.wind_string,
-							dewpoint: res.data.current_observation.dewpoint_string,
-							precip: res.data.current_observation.precip_today_string,
-						},
-						image: res.data.current_observation.image.url,
+						image: res.data.current_observation.icon_url,
 						forecastUrl: res.data.current_observation.forecast_url,
 						historyUrl: res.data.current_observation.history_url
 					};
+					$scope.stats = [
+						{label: "Temperature", data: res.data.current_observation.temperature_string},
+						{label: "Feels Like", data: res.data.current_observation.feelslike_string},
+						{label: "Humidity", data: res.data.current_observation.relative_humidity},
+						{label: "Wind", data: res.data.current_observation.wind_string},
+						{label: "Dewpoint", data: res.data.current_observation.dewpoint_string},
+						{label: "Precitation", data: res.data.current_observation.precip_today_string}
+					]
 				});
 		};
 		$scope.reset = function() {

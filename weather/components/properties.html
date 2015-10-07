@@ -1,0 +1,25 @@
+<dom-module id="object-properties">
+	<template>
+		<div class="panel panel-card">
+			<div class="panel-body">
+				<template is="dom-repeat" items="{{data}}">
+					<dl>
+						<dt>{{item.label}}</dt>
+						<dd>{{item.data}}</dd>
+					</dl>
+				</template>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'object-properties',
+		properties: {
+			data: {
+				type: Array
+			}
+		}
+	});
+</script>
