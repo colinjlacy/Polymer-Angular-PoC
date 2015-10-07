@@ -1,0 +1,22 @@
+<dom-module id="state-input">
+	<template>
+		<div class="panel panel-card">
+			<div class="panel-body">
+				<h2><small>Enter your state:</small></h2>
+				<select class="form-control input-lg" type="text" ng-model="state" ng-options="option.id as option.name for option in options">
+				</select>
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'state-input',
+		properties: {
+			options: {
+				type: Array
+			}
+		}
+	});
+</script>

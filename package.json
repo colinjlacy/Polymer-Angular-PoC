@@ -1,0 +1,17 @@
+{
+  "name": "polymer-angular-poc",
+  "version": "1.0.0",
+  "description": "a simple poc using angular and polymer to demonstrate how I might structure a spa",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "jit-grunt": "^0.9.1"
+  }
+}

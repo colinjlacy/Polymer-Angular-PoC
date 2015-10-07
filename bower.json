@@ -1,0 +1,27 @@
+{
+  "name": "polymer-angular-poc",
+  "version": "0.0.0",
+  "authors": [
+    "colinjlacy <colin@webcake.co>"
+  ],
+  "description": "a simple poc using angular and polymer to demonstrate how I might structure a spa",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "polymer": "~1.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}

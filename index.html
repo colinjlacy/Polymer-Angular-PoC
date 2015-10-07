@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="weather">
+<head>
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="stylesheet" href="assets/css/site.css"/>
+	<link rel="import" href="assets/lib/polymer.html">
+	<link rel="import" href="weather/components/city-input.html">
+	<link rel="import" href="weather/components/state-input.html">
+</head>
+<body ng-controller="weatherCtrl">
+
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Polymer Angular PoC</a>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+
+	<div class="row" ng-hide="weather">
+		<div class="col-md-8 col-md-push-2">
+			<city-input></city-input>
+			<state-input options="options"></state-input>
+			<div class="text-center">
+				<button class="btn btn-lg btn-primary btn-outline btn-form" ng-click="submit()">Submit</button>
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="weather" class="row">
+		<div class="col-sm-6">
+			<div class="panel panel-card">
+				<div class="panel-body">
+					<h1>{{weather.city}} <small>| {{weather.state}}</small></h1>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6"></div>
+	</div>
+
+</div><!-- /.container -->
+
+<script src="//localhost:35729/livereload.js"></script>
+<script src="assets/lib/angular.min.js"></script>
+<script src="weather/weather.app.js"></script>
+<script src="weather/weather.config.js"></script>
+<script src="weather/weather.controllers.js"></script>
+</body>
+</html>
